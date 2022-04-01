@@ -7,9 +7,9 @@ const {createAccount, userLogin, creditMyAccount, creditAnotherAccount, debitMyA
 const verify = require('../middlewares/verifytoken')
 
 route.post('/create-account', createAccount);
-route.post('/account/login', userLogin);
-route.post('/account/credit-account', verify,creditMyAccount);
-route.post('/account/credit-foreign-account', verify,creditAnotherAccount);
-route.post('/account/debit-account', verify,debitMyAccount);
+route.post('/login', userLogin);
+route.post('/credit-account', verify,creditMyAccount);
+route.post('/credit-foreign-account', verify,creditAnotherAccount);
+route.post('/debit-account', verify,debitMyAccount);
 
 module.exports = route;
